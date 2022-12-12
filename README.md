@@ -4,6 +4,14 @@
 ## Tech Stack
 Android, Java, Flask, Python, AWS Lambda, AWS RDS
 
+## Design Pattern
+MVP pattern
+1. MainActivity – InitialPresenter – InitialModel
+2. HitterActivity – HitterPresenter – HitterModel
+3. PitcherActivity – PitcherPresenter – PitcherModel
+4. SearchActivity – SearchPresenter - SearchModel
+5. PlayerListActivity – PlayerListPresenter - PlayerListModel
+
 ## Description
 ### What is baseball_roster?
 - 포지션 별로 메이저 리그의 선수들을 골라 자신만의 선수단을 꾸릴 수 있는 어플리케이션입니다.
@@ -19,16 +27,27 @@ Android, Java, Flask, Python, AWS Lambda, AWS RDS
 #### 1. MainActivity
 어플리케이션의 초기 화면을 구성합니다. Hitter 버튼을 누르면 Hitter Roster 화면으로, Pitcher 버튼을 누르면 Pitcher Roster 화면으로 넘어갑니다.
 
-![image](https://user-images.githubusercontent.com/92534037/206984620-e1509b75-afc0-4a01-85d4-a0b2ae149145.png)
-
+<img src="https://user-images.githubusercontent.com/92534037/206984620-e1509b75-afc0-4a01-85d4-a0b2ae149145.png" width="30%"/>
 
 #### 2. HitterRosterActivity
 타자 선수진 화면을 구성합니다. 새로운 타자를 추가할 수도 있고, 초기화를 시킬 수도 있습니다.
 
+<img src="https://user-images.githubusercontent.com/92534037/206985771-0032a4b1-11b1-47bd-8e39-85fb6c80d1f1.png" width="30%"/>
+
 #### 3. PitcherRosterActivity
 HitterRosterActivity의 투수 버전입니다. 기능은 동일합니다.
 
-#### 4. 팀과 연도를 선택하여 검색을 할 수 있습니다. Search 버튼을 누르면 해당 연도의 해당 팀 선수진 목록이 나오게 됩니다. HitterRosterActivity에서 포수 추가 버튼을 눌러서 SearchActivity로 넘어왔다면 Search의 결과는 포수 선수들만 나오게 됩니다. 지명타자나 타자 후보의 경우 모든 포지션의 타자가 모두 가능하기 때문에 모든 타자 선수들이 나옵니다.
+#### 4. SearchActivity
+팀과 연도를 선택하여 검색을 할 수 있습니다. Search 버튼을 누르면 해당 연도의 해당 팀 선수진 목록이 나오게 됩니다. HitterRosterActivity에서 포수 추가 버튼을 눌러서 SearchActivity로 넘어왔다면 Search의 결과는 포수 선수들만 나오게 됩니다. 지명타자나 타자 후보의 경우 모든 포지션의 타자가 모두 가능하기 때문에 모든 타자 선수들이 나옵니다.
+
+<img src="https://user-images.githubusercontent.com/92534037/206986122-879fc031-cf14-4f9c-bd0f-fe2824a027d7.png" width="30%"/>
 
 #### 5. PlayListActivity
 검색한 결과의 선수들이 리스트뷰에 나타납니다. 각 리스트는 선수의 얼굴 사진과 해당 선수의 간략한 기록들로 이루어져 있습니다. 한 선수를 선택하여 자신의 선수로 만들 수 있습니다.
+
+<img src="https://user-images.githubusercontent.com/92534037/206986229-8f2aa515-1f60-4003-8496-ab8ae0534de2.png" width="30%"/>
+<br/>
+
+### After select!!!
+<img src="https://user-images.githubusercontent.com/92534037/206986963-67278dfb-031c-4c2e-bcaf-98274eb001df.png" width="30%"/>
+
