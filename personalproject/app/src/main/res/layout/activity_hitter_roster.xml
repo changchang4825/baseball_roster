@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/hitter_listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseball_field" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/b1"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginBottom="200dp"
+        android:tooltipText="1B"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/b2"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginBottom="40dp"
+        android:tooltipText="2B"
+        app:layout_constraintBottom_toTopOf="@+id/c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/b3"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginBottom="200dp"
+        android:tooltipText="3B"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ss"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="40dp"
+        android:contextClickable="false"
+        android:tooltipText="SS"
+        app:layout_constraintBottom_toTopOf="@+id/c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/c"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="110dp"
+        android:tooltipText="C"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/lf"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginBottom="20dp"
+        android:tooltipText="LF"
+        app:layout_constraintBottom_toTopOf="@+id/b3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/cf"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="10dp"
+        android:tooltipText="CF"
+        app:layout_constraintBottom_toTopOf="@+id/b2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/rf"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginBottom="20dp"
+        android:tooltipText="RF"
+        app:layout_constraintBottom_toTopOf="@+id/b1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dh"
+        android:layout_width="70dp"
+        android:layout_height="106dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="50dp"
+        android:tooltipText="DH"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        fresco:placeholderImage="@android:color/holo_orange_light" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Hitter candidates"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/hitter_listView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/candidates_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="( 0/4 )"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="add candidate"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        app:layout_constraintBottom_toTopOf="@+id/add_btn"
+        app:layout_constraintEnd_toEndOf="@+id/add_btn"
+        app:layout_constraintStart_toStartOf="@+id/add_btn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hitter_listView"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
