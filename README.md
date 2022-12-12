@@ -2,7 +2,7 @@
 나만의 야구 선수단 만들기
 
 ## Tech Stack
-Android, Java, Flask, Python, AWS Lambda, AWS RDS
+Android, Java, Flask, Python, PostgreSQL, AWS Lambda, AWS RDS
 
 ## Design Pattern
 MVP pattern
